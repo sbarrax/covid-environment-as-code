@@ -1,32 +1,43 @@
 if (covidSpreadsFreelyThroughTheAir() {
+  // 
   return lockdown()
 }
 
-if (covidSpreadsOnlyFromPersonTo person through droplets then {
-  
+if (covidSpreadsOnlyFromPersonToPersonThroughDroplets()) {
 
-try {
-*   Wear mask and gloves when outdoor 
-*   Wash hands
-*   Hygiene first
-*   Keep 1+ meter from others
-*  Track activities/movement  with app
+  try {
+    if (outdoor()) {
+      wearMask()
+      wearGloves()
+    }
 
+    if (backIndoor()) {
+      if (haveBathroom()) {
+        washHands()
+      } else {
+        useHandSanitizingGel()
+      }
+    }
 
-} Catch(covid-19 positive) {
+    trackLocationChangesWithSmartphone()
 
-  steadily advising if found positive
+  } catch (areYouCovid19Positive()) {
 
-} Finally {
+    steadilyInformHealthSystem()
+    selfIsolateInQuaratine()
 
-  If <it’s not enough> then {
-    Return lockdown()
+    if (symptomsAreBad()) {
+      hospitalization()
+    }
+
+  } finally {
+
+    if (covid19SpreadsAtUnsustainablePace()) {
+      return lockdown()
+    }
+
   }
 
 }
 
-}
 
--
-
-Not enough = virus spreads at unsustainable pace
